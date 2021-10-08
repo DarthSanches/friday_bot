@@ -1,8 +1,16 @@
 import telebot
 import time
 
-#friday_bot token
-fb = telebot.TeleBot("1311122903:AAGtOdh2YltJ_nl1dedCFRt2VWTfai53ZpE")
+# our friday bot
+FRIDAY_BOT_TOKEN = "1311122903:AAGtOdh2YltJ_nl1dedCFRt2VWTfai53ZpE"
+
+# our chat
+CHELNY_CHAT_ID = 1001596779053
+
+#friday_bot
+fb = telebot.TeleBot(FRIDAY_BOT_TOKEN)
+
+fb.sendMessage(CHELNY_CHAT_ID, "Приветствую, свидетели! Я бот пятницы и Юсуп мой прораб!")
 
 def listener(messages):
     for m in messages:
